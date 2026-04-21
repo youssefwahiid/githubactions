@@ -1,0 +1,25 @@
+on:
+    push:
+        branches:
+            - main
+            - "release/**"
+        paths:
+            - "src/**"
+    pull_request:
+        branches:
+            - main
+            - "release/**"
+
+jobs:
+    test:
+        runs-on:ubuntu=latest
+        steps:
+        - name: checkout codeeeeeeee
+          uses: actions/checkout@v6.0.2 
+
+         name: List Repoooo files
+         run: ls -la
+
+          name: Run testsssssss
+          run: npm test
+
