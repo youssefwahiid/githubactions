@@ -12,14 +12,14 @@ on:
 
 jobs:
     test:
-        runs-on:ubuntu=latest
+        runs-on: ubuntu=latest
         steps:
         - name: checkout codeeeeeeee
           uses: actions/checkout@v6.0.2 
 
-         name: List Repoooo files
-         run: ls -la
+        - name: List Repoooo files
+          run: ls -la
 
-          name: Run testsssssss
+        - name: Run testsssssss
           run: npm test
 
