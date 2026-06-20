@@ -10,9 +10,11 @@ jobs:
     steps:
       - name: print incident details
         run: echo "incident reported"
+        
         # there is no incident only for test
 
-
+    # run this command in terminal
+    
     #       # curl -X POST \
     # -H "Accept: application/vnd.github+json" \
     # -H "Authorization: Bearer ---->>> put your PAT here <<<-----" \
