@@ -1,0 +1,13 @@
+name: API Trigger
+
+on:
+  repository_dispatch:
+    types: [incident_report]
+
+jobs:
+  handle-incident:
+    runs-on: ubunut-latest
+    steps:
+      - name: print incident details
+        run: echo "incident reported"
+        # there is no incident only for test
