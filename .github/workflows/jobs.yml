@@ -7,6 +7,8 @@ jobs:
   job_1:
     runs-on: ubuntu-latest
     steps:        # | allow you multi line string
+      - uses: actions/checkout@v4    # pulls repo files in, including src/
+     
       - run: |     
           npm install
           npm run build
