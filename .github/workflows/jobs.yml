@@ -6,22 +6,29 @@ on:
 jobs:
   job_1:
     runs-on: ubuntu-latest
-    steps:
-      - run: echo "job 1  ${{ github.job }}"
+    steps:        # | allow you multi line string
+      - run: |     
+          npm install
+          npm run build
+        working-directory: ./src   
+        shell: bash 
+        # cmd , powershell , python
   job_2:
     runs-on: ubuntu-latest
     needs: job_1                       # will wait job_1 finish first
     steps:
       - run: echo "job 2  ${{ github.job }}"
 
-  job_3:
-    runs-on: ubuntu-latest
-    needs: job_2
-    steps:
-      - run: echo "job 3  ${{ github.job }}"
+  # job_3:
+  #   runs-on: ubuntu-latest
+  #   needs: job_2
+  #   steps:
+  #     - run: echo "job 3  ${{ github.job }}"
 
-  job_4:
-    runs-on: ubuntu-latest
-    needs: job_2
-    steps:
-      - run: echo "job 4  ${{ github.job }}"
+  # job_4:
+  #   runs-on: ubuntu-latest
+  #   needs: job_2
+  #   steps:
+  #     - run: echo "job 4  ${{ github.job }}"
+
+  
