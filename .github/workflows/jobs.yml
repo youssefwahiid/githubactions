@@ -19,6 +19,8 @@ jobs:
     needs: job_1                       # will wait job_1 finish first
     steps:
       - run: echo "job 2  ${{ github.job }}"
+      - run: echo "Triggered by ${{ github.actor }} on ${{ github.ref }}"
+
 
   # job_3:
   #   runs-on: ubuntu-latest
